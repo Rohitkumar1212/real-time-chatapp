@@ -1,6 +1,7 @@
 // packages imports
 import express from "express"
 import dotenv from "dotenv"
+import cookieParser from "cookie-parser"
 
 // files imports
 import authRoutes from "./routes/auth.routes.js"
@@ -15,6 +16,7 @@ dotenv.config()
 
 // middlewares
 app.use(express.json()) //tp parse incoming requests with JSON payloads(or from req.body)
+app.use(cookieParser())
 
 
 
