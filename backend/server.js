@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 
 // files imports
 import authRoutes from "./routes/auth.routes.js"
+import messageRoutes from "./routes/message.routes.js"
 import connectToMongoDB from "./db/connectToMongoDB.js"
 
 //variables 
@@ -19,6 +20,7 @@ app.use(express.json()) //tp parse incoming requests with JSON payloads(or from 
 
 //auth route
 app.use("/api/auth", authRoutes)
+app.use("/api/message",messageRoutes)
 
 // app.get("/", (req, res)=>{
 //     //root route http://localhost:5000
